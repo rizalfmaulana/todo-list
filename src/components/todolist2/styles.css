@@ -1,0 +1,142 @@
+.input {
+  display: flex;
+  width: 60%;
+  position: relative;
+  align-items: center;
+}
+
+.input__box {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: none;
+  transition: 0.2s;
+  box-shadow: inset 0 0 5px black;
+}
+
+.input__box:focus {
+  box-shadow: 0 0 10px 1000px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.input__box::placeholder {
+  font-family: "Patrick Hand", cursive;
+}
+
+.input__submit {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin: 12px;
+  right: 0px;
+  border: none;
+  font-size: 17px;
+  font-weight: bold;
+  background-color: #2f74c0;
+  color: white;
+  transition: 0.2s all;
+  box-shadow: 0 0 3px black;
+  cursor: pointer;
+}
+
+.input__submit:hover {
+  background-color: #388ae2;
+}
+
+.input__submit:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
+}
+
+.todos {
+  display: flex;
+  /* width: 47.5%; */
+  width: 100%;
+  flex-direction: column;
+  background-color: #c92eff;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.todos__heading {
+  font-size: 20px;
+  color: white;
+}
+
+.todos__single {
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  padding: 10px;
+  margin-top: 15px;
+  background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+  transition: all 0.2s ease-in-out;
+}
+
+.todos__single:hover {
+  box-shadow: 0 0 5px black;
+  transform: scale(1.02);
+}
+
+.todos__single--text {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+.todos__single--text:focus {
+  outline: none;
+}
+
+.icon {
+  margin-left: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  width: 60%;
+  gap: 20px;
+  margin-top: 30px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.remove {
+  background-color: #178efc;
+}
+
+.dragactive {
+  background-color: #c0077e;
+}
+
+.dragcomplete {
+  background-color: #0f79c3;
+}
+
+.drag {
+  box-shadow: 0 0 20px black;
+}
+
+@media (max-width: 1100px) {
+  .todos {
+    width: 45%;
+  }
+}
+
+@media (max-width: 700px) {
+  .input {
+    width: 95%;
+  }
+  .todos {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+  .container {
+    flex-direction: column;
+    width: 95%;
+  }
+}
